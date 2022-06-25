@@ -1,5 +1,12 @@
+import { Nav, Header } from "./Components";
+
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    <div className="bg-indigo-500">
+      <Nav />
+      <Header />
+    </div>
+  );
 };
 
 export default App;
