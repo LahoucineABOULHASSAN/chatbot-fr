@@ -4,7 +4,7 @@ const Logo = () => {
       <a href="#Home" className="navbar-logo w-full block py-5">
         <img
           src="/assets/logo.png"
-          alt="logo"
+          alt="chat bot logo"
           className="w-12 h-12 header-logo"
         />
       </a>
