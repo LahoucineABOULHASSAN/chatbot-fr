@@ -38,3 +38,8 @@ p {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 43 54 / var(--tw-bg-opacity));
+}

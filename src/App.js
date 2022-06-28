@@ -1,4 +1,4 @@
-import { Nav, Header } from "./Components";
+import { Nav, Header, Footer } from "./Components";
 import { ChatBot, About, Contact } from "./pages";
 
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
       <ChatBot />
       <About />
       <Contact />
+      <Footer />
     </main>
   );
 };
