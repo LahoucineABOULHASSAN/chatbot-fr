@@ -10,13 +10,7 @@ const ChatHeader = () => {
               <circle cx="8" cy="8" r="8" fill="currentColor"></circle>
             </svg>
           </span>
-          <ChatAvatar
-            h={"10"}
-            w={"10"}
-            smw={"16"}
-            smh={"16"}
-            url={"/assets/bot2.jpg"}
-          />
+          <ChatAvatar isAv={true} url={"/assets/bot2.jpg"} />
         </div>
         <div className="flex flex-col leading-tight">
           <div className="text-2xl mt-1 flex items-center">

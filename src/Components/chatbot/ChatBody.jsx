@@ -15,14 +15,7 @@ const ChatBody = () => {
               </span>
             </div>
           </div>
-          <ChatAvatar
-            h={"6"}
-            w={"6"}
-            smw={""}
-            smh={""}
-            order={"order-1"}
-            url={"/assets/bot2.jpg"}
-          />
+          <ChatAvatar isAv={false} order={"order-1"} url={"/assets/bot2.jpg"} />
         </div>
       </div>
       <div className="chat-message">
@@ -34,14 +27,7 @@ const ChatBody = () => {
               </span>
             </div>
           </div>
-          <ChatAvatar
-            h={"6"}
-            w={"6"}
-            smw={""}
-            smh={""}
-            order={"order-2"}
-            url={"/assets/bot1.jpg"}
-          />
+          <ChatAvatar isAv={false} order={"order-2"} url={"/assets/bot1.jpg"} />
         </div>
       </div>
     </div>
