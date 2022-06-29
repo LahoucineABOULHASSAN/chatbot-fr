@@ -6,7 +6,7 @@ const Header = () => {
       data-bs-ride="carousel"
     >
       <div className="carousel-inner relative w-full overflow-hidden h-screen">
-        <div className="carousel-item active relative float-left w-full h-screen bg-no-repeat bg-cover bg-center">
+        <div className="carousel-item active relative float-left w-full h-screen bg-no-repeat bg-cover bg-center bg-black">
           <video
             className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0"
             playsInline
@@ -15,7 +15,6 @@ const Header = () => {
             loop
           >
             <source
-              className=""
               src="https://mdbootstrap.com/img/video/Lines.mp4"
               type="video/mp4"
             />
@@ -23,10 +22,10 @@ const Header = () => {
           <div className="absolute bg-transparent top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
             <div className="flex justify-center items-center h-full">
               <div className="text-white text-center px-14 px-md-0">
-                <h2 className="text-3xl font-semibold mb-4">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                   Welcome to Learn by Bot
                 </h2>
-                <h5 className="text-lg font-semibold mb-6">
+                <h5 className="hidden md:block text-lg font-semibold mb-6">
                   A simple platform to help your students in computer science.
                 </h5>
                 <div className="md:space-x-2">

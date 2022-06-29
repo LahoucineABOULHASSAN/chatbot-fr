@@ -1,6 +1,10 @@
 const About = () => {
+  const p1 =
+    "The main idea behind our plateform is to make education more effictive and more addapted to the technologies.";
+  const p2 =
+    "The chatbot is avalaible 24/7, and privides help for our students whenever they need it.";
   return (
-    <section id="about-us" className="p-10 lg:p-16 bg-blue-100">
+    <section id="about-us" className="p-8 sm:p-10 md:p-16 bg-blue-100">
       <div className="container">
         <div id="about" className="bg-white wow fadeInUp" data-wow-delay=".2s">
           <div className="shadow-lg border-0  lg:flex items-center justify-between border overflow-hidden">
@@ -9,27 +13,16 @@ const About = () => {
                 About Us
               </span>
               <h2 className="font-bold text-3xl sm:text-4xl 2xl:text-[40px] sm:leading-snug text-dark mb-6">
-                Brilliant Toolkit to Build Nextgen Website Faster.
+                Learn by Bot.
               </h2>
               <p className="text-base text-gray-500 mb-9 leading-relaxed">
-                The main ‘thrust' is to focus on educating attendees on how to
-                best protect highly vulnerable business applications with
-                interactive panel discussions and roundtables led by subject
-                matter experts.
+                {p1}
               </p>
               <p className="text-base text-gray-500 mb-9 leading-relaxed">
-                The main ‘thrust' is to focus on educating attendees on how to
-                best protect highly vulnerable business applications with
-                interactive panel.
+                {p2}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center py-4 px-6 rounded text-white bg-blue-800 text-base font-medium hover:bg-opacity-90 hover:shadow-lg transition duration-300 ease-in-out"
-              >
-                Learn More
-              </a>
             </div>
-            <div className="text-center">
+            <div className="hidden md:block text-center">
               <div className="relative inline-block z-10">
                 <img
                   src="/assets/about-image.svg"

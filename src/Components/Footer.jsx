@@ -70,13 +70,7 @@ const footer = () => {
                 <li>
                   <a
                     href="#!"
-                    className="
-                        inline-block
-                        text-base text-[#f3f4fe]
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                      "
+                    className="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2"
                   >
                     Home
                   </a>
@@ -84,13 +78,7 @@ const footer = () => {
                 <li>
                   <a
                     href="#!"
-                    className="
-                        inline-block
-                        text-base text-[#f3f4fe]
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                      "
+                    className="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2"
                   >
                     About
                   </a>
@@ -98,15 +86,18 @@ const footer = () => {
                 <li>
                   <a
                     href="#!"
-                    className="
-                        inline-block
-                        text-base text-[#f3f4fe]
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                      "
+                    className="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2"
                   >
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.freepik.com/vectors/css"
+                    target="_blank"
+                    className="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2"
+                  >
+                    freepik
                   </a>
                 </li>
               </ul>
