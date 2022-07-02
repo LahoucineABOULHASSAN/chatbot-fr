@@ -1,4 +1,17 @@
 const ContactForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("contactForm");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div className="md:px-4 w-full lg:w-5/12 xl:w-4/12">
       <div
@@ -8,7 +21,13 @@ const ContactForm = () => {
         <h3 className="font-semibold mb-8 text-2xl md:text-[26px]">
           Send us a Message
         </h3>
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <div className="mb-6">
             <label htmlFor="fullName" className="block text-xs text-dark">
@@ -41,7 +60,8 @@ const ContactForm = () => {
             <input
               type="phone"
               name="phone"
-              placeholder="+885 1254 5211 552"
+              required
+              placeholder="+212 888 888 888"
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
             />
           </div>
@@ -52,6 +72,7 @@ const ContactForm = () => {
             <textarea
               name="message"
               rows="1"
+              required
               placeholder="type your message here"
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4 resize-none"
             ></textarea>
