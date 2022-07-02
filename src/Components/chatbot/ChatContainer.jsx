@@ -49,7 +49,7 @@ const ChatContainer = () => {
         className=" bg-white shadow rounded-xl relative z-10 overflow-hidden shadow-md text-center wow fadeInUp"
         data-wow-delay=".1s"
       >
-        <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col min-h-min max-h-screen overflow-scroll">
+        <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col min-h-min max-h-screen overflow-auto">
           <ChatHeader />
           <ChatBody chatArray={chatArray} error={error} />
           <ChatForm

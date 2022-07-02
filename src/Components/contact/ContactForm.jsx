@@ -8,7 +8,13 @@ const ContactForm = () => {
         <h3 className="font-semibold mb-8 text-2xl md:text-[26px]">
           Send us a Message
         </h3>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="mb-6">
             <label htmlFor="fullName" className="block text-xs text-dark">
               Full Name*
@@ -16,8 +22,9 @@ const ContactForm = () => {
             <input
               type="text"
               name="fullName"
-              placeholder="Adam Gelius"
+              placeholder="Full Name"
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
+              required
             />
           </div>
           <div className="mb-6">
@@ -27,6 +34,7 @@ const ContactForm = () => {
             <input
               type="email"
               name="email"
+              required
               placeholder="example@yourmail.com"
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
             />
@@ -36,7 +44,7 @@ const ContactForm = () => {
               Phone*
             </label>
             <input
-              type="text"
+              type="phone"
               name="phone"
               placeholder="+885 1254 5211 552"
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
