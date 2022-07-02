@@ -13,6 +13,7 @@ const ChatBody = ({ chatArray }) => {
           <ChatBodyAnswer response={elem.response} time={elem.time} />
         </div>
       ))}
+      <div id="clear" className="hidden"></div>
     </div>
   );
 };

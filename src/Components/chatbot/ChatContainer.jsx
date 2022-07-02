@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import ChatBody from "./ChatBody";
 import ChatForm from "./ChatForm";
@@ -23,9 +23,10 @@ const ChatContainer = () => {
           const res = await Axios.post(url, { message });
           if (res.status !== 200) {
             throw Error("Couldn't get res");
+          } else {
+            setChatArray((chatArray) => [...chatArray, res.data]);
+            setMessage("");
           }
-          setChatArray((chatArray) => [...chatArray, res.data]);
-          setMessage("");
         } catch (err) {
           const error =
             err.message === "Network Error"
@@ -38,7 +39,10 @@ const ChatContainer = () => {
     },
     [setMessage, setError]
   );
-
+  useEffect(() => {
+    const el = document.getElementById("messages");
+    el.scrollTop = el.scrollHeight;
+  });
   return (
     <div className="w-full lg:w-10/12 md:mx-4">
       <div
