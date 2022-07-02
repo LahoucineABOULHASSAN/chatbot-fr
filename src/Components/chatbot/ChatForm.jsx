@@ -1,7 +1,11 @@
-const ChatForm = () => {
+const ChatForm = ({ handleSubmit, setMessage, message }) => {
   return (
     <div className="border-t-2 py-2 border-gray-200">
-      <div className="relative flex  bg-gray-200 rounded-md mx-2">
+      <form
+        action="POST"
+        onSubmit={(event) => handleSubmit(event)}
+        className="relative flex  bg-gray-200 rounded-md mx-2"
+      >
         <span className="absolute inset-y-0 flex items-center">
           <button
             type="button"
@@ -25,12 +29,15 @@ const ChatForm = () => {
         </span>
         <input
           type="text"
+          value={message}
           placeholder="Write your message!"
           className="w-full bg-transparent focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 px-12 py-3"
+          onChange={(event) => setMessage(event.target.value)}
+          required
         />
         <div className="absolute right-0 items-center inset-y-0 sm:flex">
           <button
-            type="button"
+            type="submit"
             className="inline-flex items-center justify-center rounded-full h-12 w-12 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none mr-1"
           >
             <svg
@@ -43,7 +50,7 @@ const ChatForm = () => {
             </svg>
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
