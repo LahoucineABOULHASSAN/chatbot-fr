@@ -43,3 +43,12 @@ p {
   --tw-bg-opacity: 1;
   background-color: rgb(33 43 54 / var(--tw-bg-opacity));
 }
+#messages {
+  /* background-image: url("/chat/chat-bg.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.time {
+  text-shadow: 1px 1px #000;
+}

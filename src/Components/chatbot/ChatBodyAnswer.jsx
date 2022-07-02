@@ -1,18 +1,17 @@
 import ChatAvatar from "./ChatAvatar";
+import moment from "moment";
 
 const ChatBodyAnswer = ({ response, time }) => {
   return (
-    <div className="chat-message flex flex-start">
-      <ChatAvatar isAv={false} url={"/assets/bot2.jpg"} />
-      <div className="flex flex-col justify-center mx-2">
-        <div className="flex flex-col space-y-2 text-xs max-w-xs items-start">
-          <div>
-            <span className="px-4 text-justify py-2 rounded-lg inline-block rounded-bl-none bg-gray-200 text-gray-600">
-              {response}
-            </span>
-          </div>
-        </div>
-        <small className="text-left inline text-sm text-gray-400">{time}</small>
+    <div className="chat-message flex flex-start my-3">
+      <ChatAvatar isAv={false} url={"/assets/chat/bot.png"} />
+      <div className="flex max-w-xs items-center bg-gray-200 rounded-lg rounded-bl-none mx-2">
+        <span className="flex text-justify ml-1 h-auto text-gray-800 font-normal rounded-sm px-2 p-1 items-end">
+          {response}{" "}
+          <small className="text-gray-400 text-xs min-w-fit block lowercase pl-2">
+            {moment(time).format("LT")}
+          </small>
+        </span>
       </div>
     </div>
   );

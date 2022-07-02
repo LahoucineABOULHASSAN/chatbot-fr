@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [response, setResponse] = useState("");
   const [isSubmited, setIsSubmited] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,9 +13,8 @@ const ContactForm = () => {
     })
       .then(() => {
         myForm.reset();
-        setResponse("Thank you For Contacting us.");
         setIsSubmited(true);
-        setTimeout(() => setIsSubmited(false), 5000);
+        setTimeout(() => setIsSubmited(false), 2000);
       })
       .catch((error) => alert(error));
   };
@@ -46,7 +44,7 @@ const ContactForm = () => {
               type="text"
               name="fullName"
               placeholder="Full Name"
-              className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
+              className="w-full border-0 border-b border-blue-400 focus:border-green-500 focus:outline-none py-4"
               required
             />
           </div>
@@ -59,7 +57,7 @@ const ContactForm = () => {
               name="email"
               required
               placeholder="example@yourmail.com"
-              className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
+              className="w-full border-0 border-b border-blue-400 focus:border-green-500 focus:outline-none py-4"
             />
           </div>
           <div className="mb-6">
@@ -71,7 +69,7 @@ const ContactForm = () => {
               name="phone"
               required
               placeholder="+212 888 888 888"
-              className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4"
+              className="w-full border-0 border-b border-blue-400 focus:border-green-500 focus:outline-none py-4"
             />
           </div>
           <div className="mb-6">
@@ -83,7 +81,7 @@ const ContactForm = () => {
               rows="1"
               required
               placeholder="type your message here"
-              className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4 resize-none"
+              className="w-full border-0 border-b border-blue-400 focus:border-green-500 focus:outline-none py-4 resize-none"
             ></textarea>
           </div>
           <div className="mb-3">
@@ -97,7 +95,7 @@ const ContactForm = () => {
           {isSubmited && (
             <div className="mb-0">
               <div className="py-2 px-6 rounded text-gray-700 bg-green-200 text-base text-sm transition duration-300 ease-in-out">
-                {response}
+                Thank you For Contacting us.
               </div>
             </div>
           )}

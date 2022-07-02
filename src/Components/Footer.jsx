@@ -84,10 +84,11 @@ const footer = () => {
               </li>
               <li>
                 <a
-                  href="#!"
+                  href="https://www.flaticon.com/free-icons/bot"
+                  title="bot icons"
                   className="inline-block text-base text-[#f3f4fe] hover:text-primary leading-loose mb-2"
                 >
-                  Contact
+                  Flaticon
                 </a>
               </li>
               <li>
@@ -141,7 +142,7 @@ const footer = () => {
           </div>
           <div className="w-full md:w-1/3 lg:w-1/2 px-4">
             <div className="flex justify-center md:justify-end my-1">
-              <p className="text-base text-[#f3f4fe]">
+              <p className="text-base text-[#f3f4fe] mr-4">
                 <span
                   rel="nofollow noopner"
                   className="text-blue-400 hover:underline pr-2"

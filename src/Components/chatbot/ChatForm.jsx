@@ -1,6 +1,6 @@
 const ChatForm = ({ handleSubmit, setMessage, message }) => {
   return (
-    <div className="border-t-2 py-2 border-gray-200">
+    <div className="mt-3">
       <form
         action="POST"
         onSubmit={(event) => handleSubmit(event)}
