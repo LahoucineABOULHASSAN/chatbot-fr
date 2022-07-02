@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const ContactForm = () => {
+  const [response, setResponse] = useState("");
+  const [isSubmited, setIsSubmited] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     let myForm = document.getElementById("contactForm");
@@ -8,7 +12,12 @@ const ContactForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => {
+        myForm.reset();
+        setResponse("Thank you For Contacting us.");
+        setIsSubmited(true);
+        setTimeout(() => setIsSubmited(false), 5000);
+      })
       .catch((error) => alert(error));
   };
 
@@ -77,7 +86,7 @@ const ContactForm = () => {
               className=" w-full border-0 border-b border-[#f1f1f1] focus:border-blue-800 focus:outline-none py-4 resize-none"
             ></textarea>
           </div>
-          <div className="mb-0">
+          <div className="mb-3">
             <button
               type="submit"
               className=" inline-flex items-center justify-center py-4 px-6 rounded text-white bg-blue-800 text-base font-medium hover:bg-dark transition duration-300 ease-in-out"
@@ -85,6 +94,13 @@ const ContactForm = () => {
               Send Message
             </button>
           </div>
+          {isSubmited && (
+            <div className="mb-0">
+              <div className="py-2 px-6 rounded text-gray-700 bg-green-200 text-base text-sm transition duration-300 ease-in-out">
+                {response}
+              </div>
+            </div>
+          )}
         </form>
       </div>
     </div>
