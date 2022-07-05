@@ -12,7 +12,8 @@ const ChatContainer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    message && postData(message);
+    message.trim().length !== 0 && setMessage("");
+    message && message.trim().length !== 0 && postData(message);
   };
   const postData = useCallback(
     (message) => {
@@ -55,7 +56,7 @@ const ChatContainer = () => {
         data-wow-delay=".1s"
       >
         <div className="flex-1 p:2 sm:px-6 justify-between flex flex-col overflow-auto min-h-[400px] max-h-screen">
-          <ChatHeader />
+          <ChatHeader setChatArr={setChatArr} />
           <ChatBody chatArr={chatArr} isLoading={isLoading} />
           {isLoading && (
             <div className="w-full flex items-end space-x-1 px-4 animate-pulse">

@@ -5,8 +5,8 @@ import NavItem from "./nav/NavItem";
 const Nav = () => {
   const links = [
     { id: "chat", link: "home" },
-    { id: "about", link: "about us" },
-    { id: "contact", link: "contact us" },
+    { id: "about", link: "about" },
+    { id: "contact", link: "contact" },
   ];
   const [isHide, setIsHide] = useState(true);
   return (

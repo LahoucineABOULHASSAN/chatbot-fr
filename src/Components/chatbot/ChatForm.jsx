@@ -3,7 +3,12 @@ const ChatForm = ({ handleSubmit, setMessage, message }) => {
     <div className="my-3">
       <form
         action="POST"
-        onSubmit={(event) => handleSubmit(event)}
+        onSubmit={(event) => {
+          event.preventDefault();
+          message && message.trim().length !== 0
+            ? handleSubmit(event)
+            : setMessage("");
+        }}
         className="relative flex  bg-gray-200 rounded-md mx-2"
       >
         <span className="absolute inset-y-0 flex items-center">
@@ -19,7 +24,7 @@ const ChatForm = ({ handleSubmit, setMessage, message }) => {
           type="text"
           name="question"
           value={message}
-          placeholder="Write your message!"
+          placeholder="Write your message"
           className="w-full bg-transparent focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 px-12 py-3"
           onChange={(event) => setMessage(event.target.value)}
           required

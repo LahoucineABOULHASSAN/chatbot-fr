@@ -1,6 +1,6 @@
 import ChatAvatar from "./ChatAvatar";
 
-const ChatHeader = () => {
+const ChatHeader = ({ setChatArr }) => {
   return (
     <div className="p-3 flex items-center justify-between">
       <div className="flex items-center space-x-4">
@@ -11,7 +11,7 @@ const ChatHeader = () => {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
             </span>
           </div>
-          <ChatAvatar isAv={true} url={"/assets/chat/bot.png"} />
+          <ChatAvatar isAv={true} url={"/assets/logo.png"} />
         </div>
         <div className="flex flex-col leading-tight">
           <div className="text-2xl mt-1 flex items-center">
@@ -20,9 +20,12 @@ const ChatHeader = () => {
           <span className="text-sm text-gray-200">Algorithm</span>
         </div>
       </div>
-      <div className="flex items-center justify-center text-white bg-gray-600 hover:bg-transparent hover:text-red-500 p-4 w-10 h-10 rounded-full ease-in-out">
+      <button
+        onClick={() => setChatArr([])}
+        className="flex items-center justify-center text-white bg-gray-600 hover:bg-transparent hover:text-red-500 p-4 w-10 h-10 rounded-full ease-in-out"
+      >
         <i className="fa-solid fa-trash-can"></i>
-      </div>
+      </button>
     </div>
   );
 };

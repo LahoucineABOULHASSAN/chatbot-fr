@@ -24,11 +24,11 @@ const ChatBody = ({ chatArr, isLoading }) => {
         ))
       ) : (
         <div className="flex min-h-[inherit] items-center justify-center flex-col">
-          <h1 className="text-white text-lg mb-2">
-            Ask a question, so the bot helps you ...
+          <h1 className="text-white text-sm sm:text-md md:text-lg mb-2">
+            Send your question, so that AlgoBot can answer you ...
           </h1>
           <img
-            className="w-[200px] rounded-b-xl mb-10"
+            className="w-10/12 md:w-[400px] mx-auto rounded-b-xl mb-10"
             src="/assets/chat/hello-1.gif"
             alt="hello"
           />
