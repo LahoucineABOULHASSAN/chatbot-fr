@@ -7,6 +7,7 @@ const Nav = () => {
     { id: "chat", link: "home" },
     { id: "about", link: "about" },
     { id: "contact", link: "contact" },
+    { id: "download", link: "download app" },
   ];
   const [isHide, setIsHide] = useState(true);
   return (
@@ -32,7 +33,12 @@ const Nav = () => {
             >
               <ul className="blcok md:flex">
                 {links.map((item, index) => (
-                  <NavItem link={item.link} id={item.id} key={index} />
+                  <NavItem
+                    link={item.link}
+                    id={item.id}
+                    key={index}
+                    setIsHide={setIsHide}
+                  />
                 ))}
               </ul>
             </nav>
