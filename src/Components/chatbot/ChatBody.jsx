@@ -1,18 +1,39 @@
 import ChatBodyQuestion from "./ChatBodyQuestion";
 import ChatBodyAnswer from "./ChatBodyAnswer";
-const ChatBody = ({ chatArray }) => {
+const ChatBody = ({ chatArr, isLoading }) => {
   return (
     <div
       id="messages"
-      style={{ backgroundImage: `url("/assets/chat/chat-bg.svg")` }}
-      className="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-lg min-h-[200px] max-h-screen bg-yellow-100 mx-2"
+      // style={{ backgroundImage: `url("/assets/chat/bg-3.jpg")` }}
+      className="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded  bg-black scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch min-h-[inherit] bg-yellow-100 mx-2"
     >
-      {chatArray.map((elem, index) => (
-        <div key={index}>
-          <ChatBodyQuestion ques={elem.ques} time={elem.time} />
-          <ChatBodyAnswer response={elem.response} time={elem.time} />
+      {chatArr.length ? (
+        chatArr.map((elem, index) => (
+          <div key={index}>
+            {elem.question && (
+              <ChatBodyQuestion question={elem.question} time={elem.time} />
+            )}
+            {elem.response && (
+              <ChatBodyAnswer
+                response={elem.response}
+                time={elem.time}
+                isLoading={isLoading}
+              />
+            )}
+          </div>
+        ))
+      ) : (
+        <div className="flex min-h-[inherit] items-center justify-center flex-col">
+          <h1 className="text-white text-lg mb-2">
+            Ask a question, so the bot helps you ...
+          </h1>
+          <img
+            className="w-[200px] rounded-b-xl mb-10"
+            src="/assets/chat/hello-1.gif"
+            alt="hello"
+          />
         </div>
-      ))}
+      )}
     </div>
   );
 };

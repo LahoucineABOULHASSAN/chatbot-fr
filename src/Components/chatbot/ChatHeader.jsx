@@ -2,7 +2,7 @@ import ChatAvatar from "./ChatAvatar";
 
 const ChatHeader = () => {
   return (
-    <div className="py-3">
+    <div className="p-3 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <div className="relative">
           <div className="absolute bottom-0 right-0">
@@ -15,10 +15,13 @@ const ChatHeader = () => {
         </div>
         <div className="flex flex-col leading-tight">
           <div className="text-2xl mt-1 flex items-center">
-            <span className="text-gray-700 mr-3">AlgoBot</span>
+            <span className="text-white mr-3">AlgoBot</span>
           </div>
-          <span className="text-sm text-gray-400">Algorithm</span>
+          <span className="text-sm text-gray-200">Algorithm</span>
         </div>
+      </div>
+      <div className="flex items-center justify-center text-white bg-gray-600 hover:bg-transparent hover:text-red-500 p-4 w-10 h-10 rounded-full ease-in-out">
+        <i className="fa-solid fa-trash-can"></i>
       </div>
     </div>
   );
