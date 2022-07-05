@@ -16,7 +16,7 @@ const ContactHelp = () => {
         <div>
           <h5 className="text-lg font-semibold mb-6">Our Location</h5>
           <p className="text-base text-body-color">
-            401 Broadway, 24th Floor, Orchard Cloud View, London
+            Les Amicales, 19 rue 400, 80000 Agadir
           </p>
         </div>
       </div>
@@ -33,8 +33,8 @@ const ContactHelp = () => {
         </div>
         <div>
           <h5 className="text-lg font-semibold mb-6">How Can We Help?</h5>
-          <p className="text-base text-body-color">info@yourdomain.com</p>
-          <p className="text-base text-body-color">contact@yourdomain.com</p>
+          <p className="text-base text-body-color">elghiat.hasan@gmail.com</p>
+          <p className="text-base text-body-color">ed.aboulhassan@gmail.com</p>
         </div>
       </div>
     </div>

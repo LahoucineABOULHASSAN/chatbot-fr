@@ -127,7 +127,7 @@ const footer = () => {
                   rel="noreferrer"
                   className="text-base text-[#f3f4fe] hover:text-primary px-3"
                 >
-                  Lahoucine Aboulhassan
+                  Lahoucine ABOULHASSAN
                 </a>
                 <a
                   href="https://github.com/hassan-elghiat"
@@ -135,7 +135,7 @@ const footer = () => {
                   rel="noreferrer"
                   className="text-base text-[#f3f4fe] hover:text-primary px-3"
                 >
-                  Hassan El Ghiat
+                  Hassan EL GHIAT
                 </a>
               </div>
             </div>
